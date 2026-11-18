@@ -1,6 +1,7 @@
 // A3 + A4: scroll-driven frame film with title, tag and stage pills.
 // Frame count, file pattern and stages always come from /frames/manifest.json.
 import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 const FALLBACK_IMG = '/img/room-finished.jpg';
 const BUILD_START = 0.04; // film plays between 4% and 74% of the section
@@ -54,6 +55,8 @@ function showFallback(section) {
   img.src = FALLBACK_IMG;
   img.alt = canvas.getAttribute('aria-label');
   canvas.replaceWith(img);
+  // The section got shorter, so later scroll animations must recalculate their positions
+  requestAnimationFrame(() => ScrollTrigger.refresh());
 }
 
 export async function initFilm(root, content, { reduce }) {

@@ -1,1 +1,61 @@
-/* sections.css */
+/* A7: Contractor section */
+.contractor-cols {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap);
+  margin-top: var(--title-gap);
+}
+.contractor-col { border-top: 1px solid var(--line); padding-top: 18px; }
+.contractor-col h3 {
+  margin: 0 0 6px;
+  font-family: var(--serif);
+  font-weight: 500;
+  font-style: italic;
+  font-size: var(--fs-h3);
+  line-height: 1.2;
+}
+.contractor-col p { margin: 0; color: var(--muted); font-size: var(--fs-small); }
+
+/* A7: Trades section */
+.trades { background: var(--paper-2); }
+.trades-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: clamp(24px, 5vw, 80px);
+  margin: var(--title-gap) 0 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--line);
+}
+.trade {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 18px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line);
+}
+.trade-name {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: var(--fs-trade);
+  line-height: 1.2;
+  transition: transform .4s var(--ease-out), color .3s;
+}
+.trade-desc {
+  font-size: var(--fs-meta);
+  color: var(--muted);
+  text-align: right;
+  transition: transform .4s var(--ease-out);
+}
+/* Hover: row slides 10px right (transform only), title turns bronze */
+.trade:hover .trade-name,
+.trade:hover .trade-desc { transform: translateX(10px); }
+.trade:hover .trade-name { color: var(--bronze-hover); }
+
+@media (max-width: 760px) {
+  .contractor-cols { grid-template-columns: 1fr; }
+  .trades-list { grid-template-columns: 1fr; }
+  .trade { flex-direction: column; gap: 2px; }
+  .trade-desc { text-align: left; }
+}

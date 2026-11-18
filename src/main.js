@@ -10,6 +10,8 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import content from './content.json';
 import { initFilm } from './film.js';
+import { initContractor } from './sections/contractor.js';
+import { initTrades } from './sections/trades.js';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -23,4 +25,7 @@ if (!reduce) {
   gsap.ticker.lagSmoothing(0);
 }
 
-initFilm(document.getElementById('app'), content, { reduce });
+const app = document.getElementById('app');
+initFilm(app, content, { reduce });
+initContractor(app, content, { reduce });
+initTrades(app, content, { reduce });
