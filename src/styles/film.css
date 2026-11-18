@@ -18,7 +18,7 @@
   margin: 0;
   font-family: var(--serif);
   font-weight: 500;
-  font-size: clamp(38px, 4.6vw, 74px);
+  font-size: var(--fs-h1);
   line-height: .98;
   letter-spacing: -.01em;
 }

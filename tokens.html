@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>HPZ design tokens (dev only)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/styles/tokens.css">
+  <link rel="stylesheet" href="/src/styles/base.css">
+  <link rel="stylesheet" href="/src/styles/tokens-page.css">
+</head>
+<body>
+<main class="wrap">
+  <p class="label">Dev only · not part of the site build</p>
+  <h1 class="h2">Design<br><i>tokens.</i></h1>
+
+  <h2 class="tp-h">Colours</h2>
+  <div class="tp-swatches">
+    <div><span style="background:var(--paper)"></span>paper<br>#F4EFE8</div>
+    <div><span style="background:var(--paper-2)"></span>paper-2<br>#EDE5DA</div>
+    <div><span style="background:var(--ink)"></span>ink<br>#231F1C</div>
+    <div><span style="background:var(--muted)"></span>muted<br>#6F665D</div>
+    <div><span style="background:var(--line)"></span>line<br>rgba(35,31,28,.14)</div>
+    <div><span style="background:var(--bronze)"></span>bronze<br>#A8764A</div>
+    <div><span style="background:var(--bronze-hover)"></span>bronze-hover<br>#8C5E36</div>
+    <div><span style="background:var(--cream)"></span>cream<br>#FBF8F3</div>
+    <div><span style="background:var(--champagne)"></span>champagne<br>#D6B88E</div>
+    <div><span style="background:var(--glow)"></span>glow<br>#E2C9A6</div>
+  </div>
+
+  <h2 class="tp-h">Type</h2>
+  <div class="tp-type">
+    <p><small>h1 · Cormorant 500 · clamp(38–74px)</small><span class="serif" style="font-size:var(--fs-h1)">The room you <i>come home to.</i></span></p>
+    <p><small>h2 · Cormorant 500 · clamp(44–92px)</small><span class="h2">One contractor, <i>every trade.</i></span></p>
+    <p><small>side title · clamp(46–86px)</small><span class="serif" style="font-size:var(--fs-side)">Homes for <i>slow mornings.</i></span></p>
+    <p><small>h3 · Cormorant italic 30px</small><span class="serif" style="font-size:var(--fs-h3)"><i>Measured</i></span></p>
+    <p><small>trade · clamp(24–32px)</small><span class="serif" style="font-size:var(--fs-trade)">Marble laying and polishing</span></p>
+    <p><small>detail · clamp(21–27px)</small><span class="serif" style="font-size:var(--fs-detail)">info@hpznetwork.co.in</span></p>
+    <p><small>body · Manrope 400 · 16px</small><span style="font-size:var(--fs-body)">Every job starts with a site visit and real measurements.</span></p>
+    <p><small>small · 15px / meta · 13px</small><span style="font-size:var(--fs-small)">Plumbing, wiring, plaster.</span> <span style="font-size:var(--fs-meta);color:var(--muted)">Concealed lines and fittings</span></p>
+    <p><small>label · Manrope 600 · 10.5px · .26em</small><span class="label">Proprietor</span></p>
+  </div>
+
+  <h2 class="tp-h">Pills and focus</h2>
+  <p class="tp-row">
+    <a class="pill" href="#top">CONTACT</a>
+    <a class="pill pill--lg" href="#top">TALK TO HPZ</a>
+    <span class="tp-note">Hover to see the 1px lift. Press Tab to see the 2px bronze focus ring.</span>
+  </p>
+
+  <h2 class="tp-h">Dark contact palette</h2>
+  <div class="tp-dark">
+    <span class="label" style="color:var(--champagne)">Mobile</span>
+    <span class="serif" style="font-size:var(--fs-detail)">90032 33977</span>
+    <span class="h2" style="color:var(--cream)">Start <i style="color:var(--glow)">yours.</i></span>
+  </div>
+</main>
+</body>
+</html>
