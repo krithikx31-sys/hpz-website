@@ -1,0 +1,50 @@
+{
+  "_owner": "Krithik. Ashik reads this file but never edits it. Ask Krithik for any text change.",
+  "business": "HPZ Renovation Construction",
+  "proprietor": "Jacop Danial Joseph",
+  "mobile": { "label": "90032 33977", "tel": "+919003233977" },
+  "office": [
+    { "label": "044 4959 5111", "tel": "+914449595111" },
+    { "label": "044 4355 6364", "tel": "+914443556364" }
+  ],
+  "email": "info@hpznetwork.co.in",
+  "address": ["No.2, 1st Street, Siva Shakthi Nager,", "Korattur, Chennai 600080"],
+  "gstin": "33GLVPS3652E1ZM",
+  "showGstin": true,
+  "domain": "hpznetwork.co.in",
+  "film": {
+    "title": ["The room you", "come home to."],
+    "tag": "HPZ · RENOVATION",
+    "sideTitle": ["Homes for", "slow mornings."],
+    "sideText": "From bare concrete to plastered walls, marble floors, a lit ceiling and a room you never want to leave. One contractor, every trade, finished by hand.",
+    "sideButton": "TALK TO HPZ"
+  },
+  "contractor": {
+    "title": ["One contractor,", "every trade."],
+    "columns": [
+      { "title": "Measured", "text": "Every job starts with a site visit and real measurements." },
+      { "title": "Built", "text": "Plumbing, wiring, plaster and waterproofing done right underneath." },
+      { "title": "Finished", "text": "Tiles, paint, ceilings and lights, handed over clean." }
+    ]
+  },
+  "tradesTitle": ["Fourteen trades.", "One team."],
+  "trades": [
+    ["Tiles laying", "Vitrified, ceramic and Athangudi"],
+    ["Painting", "Interior and exterior"],
+    ["Plumbing", "Concealed lines and fittings"],
+    ["Electrical", "Wiring and points"],
+    ["Waterproofing", "Terraces and bathrooms"],
+    ["Marble laying and polishing", "Laying and mirror finish"],
+    ["False ceiling", "Gypsum and grid with lights"],
+    ["Aluminium and UPVC", "Windows, doors, partitions"],
+    ["Grill gates", "Gates, grills and railings"],
+    ["Interiors", "Wardrobes, kitchens, TV units"],
+    ["Fabrication", "Steel structures and stairs"],
+    ["Demolition", "Safe breaking, debris removal"],
+    ["House height lifting", "Raise the house, keep the home"],
+    ["Scaffolding and bore work", "Exterior access and bore wells"]
+  ],
+  "contactTitle": ["Start", "yours."],
+  "footer": "© 2026 HPZ Renovation Construction · Website by Ironvale",
+  "conceptNote": "Room film is a concept visualisation and will be replaced with HPZ's own work."
+}

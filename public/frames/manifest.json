@@ -1,0 +1,14 @@
+{
+  "count": 132,
+  "pattern": "f{0000}.jpg",
+  "width": 1200,
+  "height": 675,
+  "stages": [
+    { "label": "Walls",         "start": 0.00 },
+    { "label": "Marble floor",  "start": 0.20 },
+    { "label": "False ceiling", "start": 0.40 },
+    { "label": "Furniture",     "start": 0.60 },
+    { "label": "Lights",        "start": 0.80 }
+  ],
+  "note": "Owned by Krithik. Ashik's code must read count and stages from here and never hard-code them, so the frames can be replaced later without touching code."
+}
