@@ -1,5 +1,6 @@
-/* Design tokens (A6 will complete this file) */
+/* A6: design tokens. Every colour, font, size and spacing value lives here. */
 :root {
+  /* Colours: page */
   --paper: #F4EFE8;
   --paper-2: #EDE5DA;
   --ink: #231F1C;
@@ -8,8 +9,40 @@
   --bronze: #A8764A;
   --bronze-hover: #8C5E36;
   --cream: #FBF8F3;
-  --champagne: #D6B88E;
 
-  --serif: "Cormorant Garamond", Georgia, serif;
-  --sans: "Manrope", system-ui, sans-serif;
+  /* Colours: contact section (dark) */
+  --contact-bg: var(--ink);
+  --champagne: #D6B88E;
+  --glow: #E2C9A6;
+  --contact-line: rgba(226, 201, 166, .3);
+  --contact-muted: #A9A197;
+
+  /* Fonts */
+  --serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --sans: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  /* Type scale */
+  --fs-h1: clamp(38px, 4.6vw, 74px);        /* film title */
+  --fs-h2: clamp(44px, 5.6vw, 92px);        /* section titles */
+  --fs-side: clamp(46px, 5.4vw, 86px);      /* film side title */
+  --fs-h3: 30px;                            /* contractor column titles */
+  --fs-trade: clamp(24px, 2.2vw, 32px);     /* trade names */
+  --fs-detail: clamp(21px, 1.8vw, 27px);    /* contact values */
+  --fs-body: 16px;
+  --fs-small: 15px;
+  --fs-meta: 13px;
+  --fs-pill: 11px;
+  --fs-label: 10.5px;                       /* small caps labels */
+
+  /* Spacing */
+  --section-pad: clamp(80px, 12vw, 150px);
+  --gutter: clamp(20px, 6vw, 90px);
+  --gap: clamp(20px, 3vw, 44px);
+  --title-gap: clamp(36px, 5vw, 64px);
+  --nav-h: 62px;
+
+  /* Shape and motion */
+  --radius-pill: 999px;
+  --radius-card: 18px;
+  --ease-out: cubic-bezier(.2, .7, .2, 1);
 }

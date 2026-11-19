@@ -1,0 +1,11 @@
+/* Styles for tokens.html only (dev page, not loaded by the site) */
+.serif { font-family: var(--serif); font-weight: 500; line-height: 1.05; }
+.serif i { font-style: italic; }
+.tp-h { margin: 64px 0 20px; font-size: var(--fs-label); font-weight: 600; letter-spacing: .26em; text-transform: uppercase; color: var(--muted); }
+.tp-swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 16px; font-size: var(--fs-meta); }
+.tp-swatches span { display: block; height: 72px; margin-bottom: 8px; border-radius: 10px; border: 1px solid var(--line); }
+.tp-type p { display: grid; gap: 4px; margin: 0; padding: 18px 0; border-top: 1px solid var(--line); }
+.tp-type small { font-size: 12px; color: var(--muted); }
+.tp-row { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; }
+.tp-note { font-size: var(--fs-meta); color: var(--muted); }
+.tp-dark { display: grid; gap: 10px; padding: 40px; border-radius: var(--radius-card); background: var(--contact-bg); color: var(--cream); }

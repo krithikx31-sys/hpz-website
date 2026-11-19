@@ -1,11 +1,21 @@
-/* A3 + A4: film section */
+/* A3 + A4 + A5: film section */
 .film { height: 560vh; background: var(--paper); }
 .film-pin { position: sticky; top: 0; height: 100vh; height: 100svh; overflow: hidden; }
-.film-frame { position: absolute; inset: 0; overflow: hidden; background: #222; }
+
+/* The frame that shrinks into a card (A5.1) */
+.film-frame {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: #222;
+  transform-origin: 94% 50%;
+  will-change: transform;
+}
 .film-canvas, .film-fallback {
   position: absolute; inset: 0; width: 100%; height: 100%; display: block; object-fit: cover;
 }
 
+/* Overlay: title, tag, stage pills (A4) */
 .film-title {
   position: absolute;
   left: clamp(18px, 3.4vw, 46px);
@@ -18,7 +28,7 @@
   margin: 0;
   font-family: var(--serif);
   font-weight: 500;
-  font-size: clamp(38px, 4.6vw, 74px);
+  font-size: var(--fs-h1);
   line-height: .98;
   letter-spacing: -.01em;
 }
@@ -38,19 +48,89 @@
   font-size: 11px;
   letter-spacing: .08em;
   padding: 6px 12px;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   color: var(--cream);
   background: rgba(251, 248, 243, .18);
   border: 1px solid rgba(251, 248, 243, .35);
   backdrop-filter: blur(4px);
-  transition: background .5s, color .5s, border-color .5s;
+  transition: background-color .5s, color .5s, border-color .5s;
 }
 .film-stages li.on { background: var(--cream); color: var(--ink); border-color: var(--cream); }
 
-/* Reduced motion / failed frames: one static screen with the finished room */
-.film--static { height: auto; }
-.film--static .film-pin { position: relative; }
+/* Side text (A5.3). GSAP sets opacity and the -50% / 30px rise. */
+.film-side {
+  position: absolute;
+  left: clamp(20px, 5vw, 80px);
+  top: 50%;
+  width: min(36vw, 480px);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.film-side h2 {
+  margin: 0 0 18px;
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: var(--fs-side);
+  line-height: .95;
+  letter-spacing: -.01em;
+}
+.film-side h2 i { font-style: italic; color: var(--bronze-hover); }
+.film-side p { margin: 0 0 22px; max-width: 380px; color: var(--muted); }
 
-@media (max-width: 760px) {
+/* Floating photos (A5.4) */
+.film-float {
+  position: absolute;
+  border-radius: 14px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 30px 60px rgba(35, 31, 28, .22);
+  opacity: 0;
+  will-change: transform, opacity;
+  pointer-events: none;
+}
+.film-float--marble {
+  background-image: url("/img/float-marble.jpg");
+  width: min(16vw, 220px);
+  aspect-ratio: 3 / 4;
+  right: 4vw;
+  top: 12vh;
+}
+.film-float--sofa {
+  background-image: url("/img/float-sofa.jpg");
+  width: min(15vw, 210px);
+  aspect-ratio: 4 / 3;
+  right: 6vw;
+  bottom: 7vh;
+}
+
+/* Phones: card shrinks to the bottom, text sits above it */
+@media (max-width: 759.98px) {
+  .film-frame { transform-origin: 50% 96%; }
   .film-tag { display: none; }
+  .film-side {
+    left: 20px;
+    right: 20px;
+    top: calc(var(--nav-h) + 12px);
+    width: auto;
+  }
+  .film-side h2 { font-size: 42px; margin-bottom: 12px; }
+  .film-side p { margin-bottom: 16px; font-size: var(--fs-small); line-height: 1.5; }
+  .film-float { display: none; }
+}
+
+/* Reduced motion: photo, then the side text below it. No pinning, shrink or floats. */
+.film--static { height: auto; }
+.film--static .film-pin { position: relative; height: auto; overflow: visible; }
+.film--static .film-frame { position: relative; height: 80svh; }
+.film--static .film-stages,
+.film--static .film-float { display: none; }
+.film--static .film-side {
+  position: static;
+  width: auto;
+  max-width: 560px;
+  padding: var(--section-pad) var(--gutter) 0;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }

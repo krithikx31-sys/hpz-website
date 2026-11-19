@@ -1,27 +1,71 @@
-/* Base styles (A6 will complete this file) */
+/* A6: base styles shared by every section */
 *, *::before, *::after { box-sizing: border-box; }
 html, body { margin: 0; }
 body {
   background: var(--paper);
   color: var(--ink);
   font-family: var(--sans);
-  font-size: 16px;
+  font-size: var(--fs-body);
+  font-weight: 400;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   overflow-x: clip; /* clip, not hidden, so position: sticky keeps working */
 }
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+
+/* Focus ring: 2px bronze */
 :focus-visible { outline: 2px solid var(--bronze); outline-offset: 3px; }
 
+/* Headings: Cormorant 500, second line italic */
+.h2 {
+  margin: 0;
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: var(--fs-h2);
+  line-height: .95;
+  letter-spacing: -.01em;
+}
+.h2 i { font-style: italic; color: var(--bronze-hover); }
+
+/* Small uppercase labels */
+.label {
+  font-size: var(--fs-label);
+  font-weight: 600;
+  letter-spacing: .26em;
+  text-transform: uppercase;
+}
+
+/* Pills: bronze, fully rounded, lift 1px on hover */
 .pill {
   display: inline-flex;
   align-items: center;
   min-height: 34px;
   padding: 0 14px;
-  border-radius: 999px;
+  border: 0;
+  border-radius: var(--radius-pill);
   background: var(--bronze);
   color: #fff;
-  font-size: 11px;
+  font-family: var(--sans);
+  font-size: var(--fs-pill);
   font-weight: 600;
   letter-spacing: .1em;
   text-decoration: none;
+  cursor: pointer;
+  transition: background-color .3s, transform .3s;
+}
+.pill:hover { background: var(--bronze-hover); transform: translateY(-1px); }
+.pill--lg { min-height: 44px; padding: 0 20px; } /* 44px tap target for main buttons */
+
+/* Section padding */
+.wrap { padding: var(--section-pad) var(--gutter); }
+
+/* Visually hidden but readable by screen readers */
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
 }
