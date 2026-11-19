@@ -59,3 +59,78 @@
   .trade { flex-direction: column; gap: 2px; }
   .trade-desc { text-align: left; }
 }
+
+/* A8: Contact section (dark) */
+.contact {
+  position: relative;
+  overflow: hidden;
+  background: var(--contact-bg);
+  color: var(--cream);
+}
+.contact-bg {
+  position: absolute;
+  inset: 0;
+  background: url("/img/room-finished.jpg") center / cover no-repeat;
+  opacity: .35;
+  -webkit-mask-image: linear-gradient(180deg, #000, transparent 85%);
+  mask-image: linear-gradient(180deg, #000, transparent 85%);
+}
+.contact-inner { position: relative; padding-bottom: clamp(50px, 8vw, 100px); }
+.contact .h2 { color: var(--cream); }
+.contact .h2 i { color: var(--glow); text-shadow: 0 0 38px rgba(226, 201, 166, .35); }
+
+.contact-details {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0 clamp(22px, 4vw, 56px);
+  margin-top: var(--title-gap);
+  font-style: normal;
+}
+.contact-item { border-top: 1px solid var(--contact-line); padding: 20px 0 22px; }
+.contact-item .label { display: block; margin-bottom: 8px; color: var(--champagne); }
+.contact-value {
+  margin: 0;
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: var(--fs-detail);
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+.contact-value--mono { font-family: var(--sans); font-size: var(--fs-body); letter-spacing: .12em; }
+
+/* Phone and email links: gold underline draws in on hover/focus */
+.contact-value a {
+  display: inline-block;
+  padding: 6px 0;
+  text-decoration: none;
+  background: linear-gradient(var(--champagne), var(--champagne)) 0 calc(100% - 4px) / 0 1px no-repeat;
+  transition: background-size .5s var(--ease-out);
+}
+.contact-value a:hover,
+.contact-value a:focus-visible { background-size: 100% 1px; }
+
+/* Footer */
+.footer { background: var(--contact-bg); color: var(--contact-muted); }
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 0 var(--gutter);
+  padding: 26px 0 40px;
+  border-top: 1px solid rgba(251, 248, 243, .14);
+  font-size: 12px;
+}
+.footer-mark { display: flex; align-items: center; gap: 14px; color: var(--cream); }
+.footer-emblem { width: 54px; height: 54px; flex: none; }
+.footer-mark b { display: block; font-family: var(--serif); font-weight: 600; font-size: 22px; letter-spacing: .16em; line-height: 1; }
+.footer-mark small { font-size: 10px; letter-spacing: .24em; color: var(--champagne); }
+.footer-text { text-align: right; }
+.footer-text p { margin: 0; }
+.footer-text p + p { margin-top: 4px; }
+
+@media (max-width: 760px) {
+  .contact-details { grid-template-columns: 1fr; }
+  .footer-text { text-align: left; }
+}

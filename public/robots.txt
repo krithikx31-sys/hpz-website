@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://hpznetwork.co.in/sitemap.xml

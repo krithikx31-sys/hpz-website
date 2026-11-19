@@ -14,6 +14,7 @@ import { initNav } from './nav.js';
 import { initFilm } from './film.js';
 import { initContractor } from './sections/contractor.js';
 import { initTrades } from './sections/trades.js';
+import { initContact } from './sections/contact.js';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -43,3 +44,4 @@ initNav({ reduce, scrollTo });
 initFilm(app, content, { reduce, scrollTo });
 initContractor(app, content, { reduce });
 initTrades(app, content, { reduce });
+initContact(app, content, { reduce });
