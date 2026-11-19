@@ -132,5 +132,8 @@
 
 @media (max-width: 760px) {
   .contact-details { grid-template-columns: 1fr; }
+}
+/* When the footer wraps onto two rows, keep its text left-aligned */
+@media (max-width: 1023.98px) {
   .footer-text { text-align: left; }
 }
